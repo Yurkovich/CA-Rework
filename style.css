@@ -1,0 +1,155 @@
+
+:root {
+    --light-gray: #444;
+    --dark-gray: #353535;
+    --white: #fff;
+    --large-gap: 15px;
+    --gap: 2px;
+    --padding: 15px 20px;
+    --border-radius: 10px;
+}
+
+body {
+    font-family: "Open Sans", serif;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--dark-gray);
+}
+
+button, a {
+    font: inherit;
+    color: var(--white);
+    background: var(--light-gray);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    height: 100vh;
+    width: 100vw;
+
+    gap: var(--large-gap);
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.wrapper {
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column: span 8 / span 8;
+    grid-row: span 11 / span 11;
+    grid-row-start: 2;
+    gap: var(--large-gap)
+}
+
+
+.header__button svg,
+.header__button path {
+    max-width: 24px;
+    max-height: 24px;
+    fill: var(--white);
+}
+
+
+/* =================================== */
+/* =================================== */
+/* =================================== */
+
+
+.header {
+    grid-column: span 8 / span 8;
+}
+
+.header__list {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+    gap: var(--large-gap);
+    height: 100%;
+}
+
+.header__item {
+}
+
+.header__link {
+    border-radius: var(--border-radius);
+}
+
+.header__button {
+    border-radius: var(--border-radius);
+}
+
+.header__edit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--large-gap);
+}
+
+
+/* ======================================== */
+/* ======================================== */
+/* ======================================== */
+
+
+.order {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+
+    grid-column: span 3 / span 3;
+    grid-row: span 11 / span 11;
+
+    gap: var(--gap);
+}
+
+.order__header {
+    display: flex;
+    gap: var(--gap);
+    grid-column: span 3 / span 3;
+    grid-row: span 1 / span 1;
+}
+
+.order__prev {
+}
+
+.order__cur {
+}
+
+.order__next {
+}
+
+/* ================================ */
+/* ================================ */
+/* ================================ */
+
+.category {
+    grid-column: span 2 / span 2;
+    grid-row: span 11 / span 11;
+    grid-column-start: 4;
+}
+
+/* =============================== */
+/* =============================== */
+/* =============================== */
+
+.menu {
+    grid-column: span 3 / span 3;
+    grid-row: span 11 / span 11;
+    grid-column-start: 6;
+}
